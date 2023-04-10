@@ -50,7 +50,7 @@ li{
 }
 
 #container--main{
-    max-width: 700px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 1em;
 }
@@ -181,3 +181,8 @@ li{
         padding-left: 0;
     }
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
