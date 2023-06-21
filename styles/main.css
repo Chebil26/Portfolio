@@ -1,369 +1,406 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap");
 
-:root{
-    --mainTextColor-light:#000;
-    --secondaryTextColor-light:rgb(51 51 51);
-    --mainLinkColor-light:#0da2b8;
-    --mainBorderColor-light:rgb(218, 218, 218);
-    --mainBgColor-light:rgb(249, 250,251);
+:root {
+  --mainTextColor-light: #000;
+  --secondaryTextColor-light: rgb(51 51 51);
+  --mainLinkColor-light: #0da2b8;
+  --mainBorderColor-light: rgb(218, 218, 218);
+  --mainBgColor-light: rgb(249, 250, 251);
 
-    --mainTextColor-dark:#fff;
-    --secondaryTextColor-dark:#adb0b1;
-    --mainLinkColor-dark:rgb(30, 190,214);
-    --mainBorderColor-dark:#2b3031;
-    --mainBgColor-dark:#131415;
-    
-    --mainTextColor:var(--mainTextColor-dark);
-    --secondaryTextColor:var(--secondaryTextColor-dark);
-    --mainLinkColor:var(--mainLinkColor-dark);
-    --mainBorderColor:var(--mainBorderColor-dark);
-    --mainBgColor:var(--mainBgColor-dark);
+  --mainTextColor-dark: #fff;
+  --secondaryTextColor-dark: #adb0b1;
+  --mainLinkColor-dark: rgb(30, 190, 214);
+  --mainBorderColor-dark: #2b3031;
+  --mainBgColor-dark: #131415;
 
+  --mainTextColor: var(--mainTextColor-dark);
+  --secondaryTextColor: var(--secondaryTextColor-dark);
+  --mainLinkColor: var(--mainLinkColor-dark);
+  --mainBorderColor: var(--mainBorderColor-dark);
+  --mainBgColor: var(--mainBgColor-dark);
 }
 
-
-*{
-    font-family: 'Readex Pro';
-    line-height: 1.5em;
-    box-sizing: border-box;
-    color: var(--mainTextColor);
-    
+* {
+  font-family: "Readex Pro";
+  line-height: 1.5em;
+  box-sizing: border-box;
+  color: var(--mainTextColor);
 }
 
-body{
-    background-color: var(--mainBgColor);            
+body {
+  background-color: var(--mainBgColor);
 }
 
-p, span, li{
-    color: var(--secondaryTextColor);
-    font-size: 1em;
+p,
+span,
+li {
+  color: var(--secondaryTextColor);
+  font-size: 1em;
 }
 
-a{
-    text-decoration: none;
-    color: var(--mainLinkColor);
-    font-weight: 500;
+a {
+  text-decoration: none;
+  color: var(--mainLinkColor);
+  font-weight: 500;
 }
 
-li{
-    line-height: 1.9em;
+li {
+  line-height: 1.9em;
 }
 
-#container--main{
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em;
+#container--main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
 }
 
-.section--page{
+.section--page {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#wrapper--hero {
+  display: flex;
+  align-items: center;
+  gap: 4em;
+}
+
+#bio,
+a {
+  font-weight: 300;
+}
+
+#user-name {
+  font-size: 48px;
+  line-height: 1em;
+}
+
+#profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#email {
+  color: var(--mainTextColor);
+}
+
+#socials--list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1em;
+  flex-wrap: wrap;
+}
+
+#socials--list a {
+  font-weight: 300;
+  color: var(--secondaryTextColor);
+  font-size: 0.9em;
+  transition: 0.3s;
+}
+
+#socials--list a:hover {
+  font-weight: 100;
+  color: var(--mainLinkColor);
+  font-size: 0.9em;
+}
+
+#qualifications--list {
+  list-style: none;
+}
+
+#wrapper--techstack__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  font-size: 0.9em;
+}
+
+.card--techstack {
+  border: 1px solid var(--mainBorderColor);
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  align-items: center;
+}
+
+.card--project {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 1px solid var(--mainBorderColor);
+}
+
+.card--project a {
+  color: var(--mainTextColor);
+
+  transition: 0.3s;
+}
+
+.card--project a:hover {
+  color: rgb(30, 190, 214);
+}
+
+.card--work-history {
+  border-left: 1px solid var(--mainBorderColor);
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding-left: 2em;
+}
+
+.line-break {
+  background-color: var(--mainBorderColor);
+  height: 1px;
+}
+
+@media (max-width: 600px) {
+  .section--page {
     padding-top: 1em;
     padding-bottom: 1em;
-}
+  }
 
-#wrapper--hero{
+  #wrapper--hero {
     display: flex;
     align-items: center;
-    gap: 4em;
-}
-
-#bio, a{
-    font-weight: 300;
-}
-
-#user-name{
-    font-size: 48px;
-    line-height: 1em;
-}
-
-#profile-pic{
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-#email{
-    color: var(--mainTextColor);
-}
-
-#socials--list{
-    display: flex;
-    justify-content: space-between;
-    column-gap: 1em;
-    flex-wrap: wrap;
-}
-
-#socials--list a{
-    font-weight: 300;
-    color: var(--secondaryTextColor);
-    font-size: 0.9em;
-    transition: 0.3s;
-}
-
-#socials--list a:hover{
-    font-weight: 100;
-    color: var(--mainLinkColor);
-    font-size: 0.9em;
-}
-
-#qualifications--list{
-    list-style: none;
-}
-
-#wrapper--techstack__items{
-    display: flex;
-    flex-wrap: wrap;
     gap: 1em;
-    font-size: 0.9em;
-}
+  }
 
-.card--techstack{
-    border: 1px solid var(--mainBorderColor);
-    border-radius: 5px;
-    padding: 0.5em 1em;
-    align-items: center;
-}
+  #profile-pic {
+    width: 200px;
+    height: 200px;
+  }
 
-.card--project{
-    padding-top: 1em;
-    padding-bottom: 1em;
-    border-top: 1px solid var(--mainBorderColor);
-}
+  #wrapper--hero {
+    flex-direction: column;
+  }
 
-.card--project a{
-    color: var(--mainTextColor);
+  .card--work-history {
+    border-left: none;
+    padding-left: 0;
+  }
 
-    transition: 0.3s;
-}
-
-.card--project a:hover{
-    color: rgb(30, 190,214);
-
-}
-
-.card--work-history{
-    border-left: 1px solid var(--mainBorderColor);
-    margin-top: 3em;
-    margin-bottom: 3em;
-    padding-left: 2em;
-}
-
-.line-break{
-    background-color: var(--mainBorderColor);
-    height: 1px;
-}
-
-
-@media(max-width:600px){
-
-    .section--page{
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-
-    #wrapper--hero{
-        display: flex;
-        align-items: center;
-        gap: 1em;
-    }
-
-    #profile-pic{
-        width: 200px;
-        height: 200px;
-    }
-
-    #wrapper--hero{
-        flex-direction: column;
-    }
-
-    .card--work-history{
-        border-left: none;
-        padding-left: 0;
-    }
-
-    .project--image {
-        width: 50px; /* Adjust the width as needed */
-        height: 50px; /* Maintain the aspect ratio */
-    }
-    
+  .project--image {
+    width: 30px; /* Adjust the width as needed */
+    height: 10px; /* Maintain the aspect ratio */
+  }
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-  }
+  max-width: 150%;
+  height: auto;
+}
+.mobile {
+  max-width: 50%;
+  height: auto;
+}
+/* Project section styling */
+.projects .carousel .card {
+  background: #131415;
+  border-radius: 10px;
+  padding: 25px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: inline-block; /* Add this line to display cards horizontally */
+  margin: 0 10px; /* Adjust the margin as per your preference */
+  vertical-align: top; /* Align cards to the top */
+}
 
-  
+.projects .carousel .card:hover {
+  background: #131415;
+}
 
-  
-  /* Project section styling */
+.projects .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
 
-  .projects .carousel .card {
-    background: #131415;
-    border-radius: 10px;
-    padding: 25px 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  .projects .carousel .card:hover {
-    background: #131415;
-  }
-  .projects .carousel .card .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-  }
-  .projects .carousel .card:hover .box {
-    transform: scale(1.02);
-  }
-  
-  .projects .carousel .card p {
-    font-size: 16px;
-    padding-top: 10px;
-    color: #fff;
-  }
-  .projects .carousel .card img {
-    height: 200px;
-    width: 350px;
-    object-fit: fill;
-    border-radius: 10px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-  }
-  .projects .carousel .card:hover img {
-    border-color: #fff;
-  }
-  .owl-dots {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .owl-dot {
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none !important;
-    border-radius: 50%;
-    border: 2px solid crimson !important;
-    transition: all 0.3s ease;
-  }
-  .owl-dot.active {
-    width: 35px;
-    border-radius: 14px;
-  }
-  .owl-dot.active,
-  .owl-dot:hover {
-    background: crimson !important;
-  }
-  
-  /* contact section styling */
-  .contact .title::after {
-    background: #131415;
-    content: "get in touch";
-  }
-  .contact .contact-content .column {
-    width: calc(50% - 30px);
-  }
-  .contact .left .text {
-    margin-top: 20px;
-  }
-  .contact .contact-content .left .text {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  .contact .contact-content .left p {
-    text-align: justify;
-  }
-  .contact .contact-content .left .text1 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    margin-top: 20px;
-  }
-  .contact .contact-content .left .icons {
-    margin: 10px 0;
-  }
-  .contact .contact-content .row {
-    display: flex;
-    height: 65px;
-    align-items: center;
-  }
-  .contact .contact-content .row i {
-    font-size: 25px;
-    color: crimson;
-  }
-  .contact .contact-content .row .email-icon {
-    margin-left: -7px;
-  }
-  .contact .contact-content .row .info {
-    margin-left: 30px;
-    justify-content: left;
-    float: left;
-  }
-  .contact .contact-content .info .head {
-    font-weight: 600;
-  }
-  .contact .contact-content .info .sub-title {
-    color: #fff;
-  }
-  .contact .right .text {
-    padding-bottom: 10px;
-    font-weight: 600;
-  }
-  .contact .right form .fields {
-    display: flex;
-  }
-  .contact .right form .fields,
-  .contact .right form .field {
-    height: 45px;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  .contact .right form .name {
-    margin-right: 10px;
-  }
-  .contact .right form .email {
-    margin-left: 10px;
-  }
-  .contact .right form .textarea {
-    height: 160px;
-    width: 100%;
-  }
-  .contact .right form .field input,
-  .contact .right form .textarea textarea {
-    height: 100%;
-    width: 100%;
-    border: 1px solid lightgrey;
-    border-radius: 6px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 15px;
-    font-family: "Poppins", sans-serif;
-  }
-  .contact .right form .textarea textarea {
-    padding-top: 10px;
-  }
-  .contact .right form .button {
-    height: 47px;
-    width: 220px;
-  }
-  .contact .right form .button button {
-    height: 100%;
-    width: 100%;
-    border: 2px solid crimson;
-    background: crimson;
-    color: #fff;
-    font-size: 22px;
-    font-weight: 500;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-  .contact .right form .button button:hover {
-    color: #fff;
-    background: none;
-  }
-  
-  
+.projects .carousel .card:hover .box {
+  transform: scale(1.02);
+}
+
+.projects .carousel .card p {
+  font-size: 16px;
+  padding-top: 10px;
+  color: #fff;
+}
+
+.projects .carousel .card img {
+  height: 200px;
+  width: 350px;
+  object-fit: fill;
+  border-radius: 10px;
+  border: 2px solid #131415;
+  transition: all 0.3s ease;
+}
+
+.projects .carousel .card:hover img {
+  border-color: #fff;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #131415 !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: #131415 !important;
+}
+
+/* contact section styling */
+.contact .title::after {
+  background: #131415;
+  content: "get in touch";
+}
+
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+
+.contact .left .text {
+  margin-top: 20px;
+}
+
+.contact .contact-content .left .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact .contact-content .left p {
+  text-align: justify;
+}
+
+.contact .contact-content .left .text1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.contact .contact-content .left .icons {
+  margin: 10px 0;
+}
+
+.contact .contact-content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: #131415;
+}
+
+.contact .contact-content .row .email-icon {
+  margin-left: -7px;
+}
+
+.contact .contact-content .row .info {
+  margin-left: 30px;
+  justify-content: left;
+  float: left;
+}
+
+.contact .contact-content .info .head {
+  font-weight: 600;
+}
+
+.contact .contact-content .info .sub-title {
+  color: #fff;
+}
+
+.contact .right .text {
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+.contact .right form .fields {
+  display: flex;
+}
+
+.contact .right form .fields,
+.contact .right form .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contact .right form .name {
+  margin-right: 10px;
+}
+
+.contact .right form .email {
+  margin-left: 10px;
+}
+
+.contact .right form .textarea {
+  height: 160px;
+  width: 100%;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+}
+
+.contact .right form .button {
+  height: 47px;
+  width: 220px;
+}
+
+.contact .right form .button button {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #131415;
+  background: #131415;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact .right form .button button:hover {
+  color: #fff;
+  background: none;
+}
+
+.carousel {
+  display: flex;
+}
+
+.card {
+  flex: 1;
+  margin-right: 10px;
+}
